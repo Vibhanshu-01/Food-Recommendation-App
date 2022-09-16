@@ -12,12 +12,14 @@ export default class IronPieChart extends Component {
     iron: PropTypes.number.isRequired,
   }
   calculatePercentage = (item, total) => parseInt((item * 100) / total, 10) || 0
+
   pieChartData() {
     const { iron } = this.props
     console.log(iron)
     const total = 8000
     return [
-      ['Iron', this.calculatePercentage(iron, total)],
+      ['Iron Consumed', this.calculatePercentage(iron, total)],
+      ['Iron Required', this.calculatePercentage(8000-iron, total)],
     ]
   }
  
@@ -30,7 +32,7 @@ export default class IronPieChart extends Component {
           </Tooltip>
         ) : (
           <PieChart
-            colors={['#5ca0d3', '#64CEAA', '#f9fd50']}
+            colors={['#5ca0d3', '#64CEAA']}
             id="macro_ratio_chart"
             suffix="%"
             legend={false}
