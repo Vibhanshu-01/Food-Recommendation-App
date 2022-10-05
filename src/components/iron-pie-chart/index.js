@@ -15,7 +15,6 @@ export default class IronPieChart extends Component {
 
   pieChartData() {
     const { iron } = this.props
-    console.log(iron)
     const total = 8000
     return [
       ['Iron Consumed', this.calculatePercentage(iron, total)],
@@ -32,7 +31,7 @@ export default class IronPieChart extends Component {
           </Tooltip>
         ) : (
           <PieChart
-            colors={['#5ca0d3', '#64CEAA']}
+            colors={['#008000', '#FF0000']}
             id="macro_ratio_chart"
             suffix="%"
             legend={false}

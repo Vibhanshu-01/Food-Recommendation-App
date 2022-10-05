@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import MacroPieChart from '../macro-pie-chart'
+
 import { defaultMacroNutrients } from './../calculations'
 
 import './../../App.css'
@@ -54,11 +54,7 @@ export default class MacroNutrients extends Component {
             units={macroNutrient.unit}
           />
         ))}
-        <MacroPieChart
-          proteins={this.props.macroNutrients.proteins.amount}
-          carbohydrates={this.props.macroNutrients.carbs.amount}
-          fat={this.props.macroNutrients.fats.amount}
-        />
+      
       </div>
     )
   }

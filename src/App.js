@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators'
 import MacroNutrients from './components/macro-nutrients'
 import MicroNutrients from './components/micro-nutrients'
 import IronNutrients from './components/iron-nutrients'
+import RecommendedFood from './components/recommended-food'
 
 import initTutorial from './components/tutorial'
 import Foods from './components/foods'
@@ -48,12 +49,14 @@ export default class App extends Component {
             <img alt="Logo" src={logo} />
           </div>
           <Foods updateNutrients={this.updateNutrients} />
+          
         </div>
         <div className="rightPanel">
-        <MacroNutrients macroNutrients={this.state.macroNutrients} />
         <IronNutrients  ironNutrients={this.state.iron}/>
           <MicroNutrients definitions={nutrients} microNutrients={this.state.microNutrients} />
+          <MacroNutrients macroNutrients={this.state.macroNutrients} />
         </div>
+        
       </div>
     )
   }

@@ -154,6 +154,14 @@ code {
   justify-content: space-between;
 }
 
+
+.recommendedFood{
+  margin:10pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .selectedFoodAmount .ant-input {
   text-align: right;
   width: 60px;
